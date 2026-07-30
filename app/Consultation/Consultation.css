@@ -1,0 +1,312 @@
+/* ===================================
+   Google Font
+=================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f7fbff;
+    color:#222;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.consultHero{
+    background:linear-gradient(135deg,#0B2E4E,#2F6FED);
+    color:#fff;
+    text-align:center;
+    padding:110px 20px;
+}
+
+.consultHero h1{
+    font-size:55px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.consultHero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ==========================
+   Main Section
+========================== */
+
+.consultSection{
+    padding:90px 0;
+}
+
+.consultGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:flex-start;
+}
+
+/* ==========================
+   Left Side
+========================== */
+
+.consultInfo h2{
+    color:#0B2E4E;
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+.infoCard{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.infoCard:hover{
+    transform:translateY(-5px);
+}
+
+.infoCard h3{
+    color:#2F6FED;
+    margin-bottom:12px;
+}
+
+.infoCard p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.consultForm{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.consultForm h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#0B2E4E;
+}
+
+.consultForm form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.consultForm input,
+.consultForm select,
+.consultForm textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #d7d7d7;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.consultForm input:focus,
+.consultForm select:focus,
+.consultForm textarea:focus{
+    border-color:#2F6FED;
+    box-shadow:0 0 0 3px rgba(47,111,237,.15);
+}
+
+.consultForm textarea{
+    resize:vertical;
+}
+
+.consultForm button{
+    border:none;
+    background:#2F6FED;
+    color:#fff;
+    padding:16px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.consultForm button:hover{
+    background:#0B2E4E;
+}
+
+/* ==========================
+   Process Section
+========================== */
+
+.process{
+    background:#eef6ff;
+    padding:90px 0;
+}
+
+.process h2{
+    text-align:center;
+    font-size:42px;
+    color:#0B2E4E;
+    margin-bottom:50px;
+}
+
+.processGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.step{
+    background:#fff;
+    text-align:center;
+    padding:35px 25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateY(-8px);
+}
+
+.step span{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:70px;
+    height:70px;
+    margin:auto;
+    margin-bottom:20px;
+    background:#2F6FED;
+    color:#fff;
+    font-size:26px;
+    font-weight:bold;
+    border-radius:50%;
+}
+
+.step h3{
+    margin-bottom:15px;
+    color:#0B2E4E;
+}
+
+.step p{
+    line-height:1.8;
+    color:#666;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.consultGrid{
+    grid-template-columns:1fr;
+}
+
+.consultHero h1{
+    font-size:42px;
+}
+
+.consultInfo h2{
+    font-size:32px;
+}
+
+.process h2{
+    font-size:34px;
+}
+
+}
+
+@media(max-width:768px){
+
+.consultHero{
+    padding:80px 20px;
+}
+
+.consultHero h1{
+    font-size:34px;
+}
+
+.consultHero p{
+    font-size:16px;
+}
+
+.consultForm{
+    padding:25px;
+}
+
+.process{
+    padding:70px 0;
+}
+
+.process h2{
+    font-size:28px;
+}
+
+.step{
+    padding:30px 20px;
+}
+
+.step span{
+    width:60px;
+    height:60px;
+    font-size:22px;
+}
+
+}
+
+/* Add this to the bottom of your existing Consultation.css file */
+
+.formError{
+  background:#FDEDED;
+  border:1px solid #F3C6C6;
+  color:#9B2C2C;
+  font-size:13.5px;
+  padding:10px 14px;
+  border-radius:8px;
+  margin-bottom:16px;
+}
+
+.formSuccess{
+  background:#E6F4EA;
+  border:1px solid #B8E0C2;
+  color:#2E7D46;
+  font-size:14.5px;
+  line-height:1.6;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.formSuccess button{
+  margin-top:14px;
+  background:#0B2E4E;
+  color:#FFFFFF;
+  border:none;
+  padding:10px 22px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}

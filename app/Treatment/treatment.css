@@ -1,0 +1,306 @@
+/* ==========================
+   Google Font
+========================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f8fbff;
+    color:#222;
+}
+
+.container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.treatmentHero{
+    background:linear-gradient(135deg,#0B2E4E,#2F6FED);
+    color:#fff;
+    text-align:center;
+    padding:110px 20px;
+}
+
+.treatmentHero h4{
+    display:inline-block;
+    padding:10px 24px;
+    background:#4FB6E8;
+    border-radius:40px;
+    font-size:14px;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.treatmentHero h1{
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.treatmentHero p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.9;
+    font-size:18px;
+}
+
+/* ==========================
+   Treatment Section
+========================== */
+
+.treatmentSection{
+    padding:90px 0;
+}
+
+.treatmentCard{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    margin-bottom:70px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.treatmentCard:hover{
+    transform:translateY(-8px);
+}
+
+.reverse .treatmentImage{
+    order:2;
+}
+
+.reverse .treatmentContent{
+    order:1;
+}
+
+.treatmentImage{
+    overflow:hidden;
+}
+
+.treatmentImage img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.treatmentCard:hover img{
+    transform:scale(1.08);
+}
+
+.treatmentContent{
+    padding:40px;
+}
+
+.count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#2F6FED;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.treatmentContent h2{
+    font-size:34px;
+    color:#0B2E4E;
+    margin-bottom:20px;
+}
+
+.treatmentContent p{
+    font-size:17px;
+    color:#555;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.btnGroup{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.bookBtn{
+    display:inline-block;
+    background:#2F6FED;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.bookBtn:hover{
+    background:#0B2E4E;
+}
+
+.contactBtn{
+    display:inline-block;
+    border:2px solid #2F6FED;
+    color:#2F6FED;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.contactBtn:hover{
+    background:#2F6FED;
+    color:#fff;
+}
+
+/* ==========================
+   CTA Section
+========================== */
+
+.ctaSection{
+    background:#0B2E4E;
+    color:#fff;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.ctaSection h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.ctaSection p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.ctaBtn{
+    display:inline-block;
+    background:#fff;
+    color:#0B2E4E;
+    text-decoration:none;
+    padding:16px 36px;
+    border-radius:40px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.ctaBtn:hover{
+    background:#4FB6E8;
+    color:#fff;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.treatmentCard{
+    grid-template-columns:1fr;
+}
+
+.reverse .treatmentImage,
+.reverse .treatmentContent{
+    order:unset;
+}
+
+.treatmentImage img{
+    height:320px;
+}
+
+.treatmentContent{
+    padding:30px;
+}
+
+.treatmentHero h1{
+    font-size:42px;
+}
+
+.treatmentContent h2{
+    font-size:28px;
+}
+
+.ctaSection h2{
+    font-size:34px;
+}
+
+}
+
+@media(max-width:768px){
+
+.treatmentHero{
+    padding:80px 20px;
+}
+
+.treatmentHero h1{
+    font-size:34px;
+}
+
+.treatmentHero p{
+    font-size:16px;
+}
+
+.treatmentContent p{
+    font-size:16px;
+}
+
+.btnGroup{
+    flex-direction:column;
+}
+
+.bookBtn,
+.contactBtn{
+    width:100%;
+    text-align:center;
+}
+
+.count{
+    width:60px;
+    height:60px;
+    font-size:20px;
+}
+
+.treatmentImage img{
+    height:260px;
+}
+
+.ctaSection{
+    padding:70px 20px;
+}
+
+.ctaSection h2{
+    font-size:28px;
+}
+
+.ctaSection p{
+    font-size:16px;
+}
+
+}

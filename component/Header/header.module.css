@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---------- Navbar shell ---------- */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:16px 44px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border-bottom:1px solid #E1EBF2;
+  box-shadow:0 1px 0 rgba(11,46,78,.02);
+  transition:box-shadow .3s cubic-bezier(.22,1,.36,1), background .3s cubic-bezier(.22,1,.36,1);
+}
+
+/* ---------- Brand ---------- */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:#0B2E4E;
+  font-family:'Poppins', 'Segoe UI', sans-serif;
+  font-weight:800;
+  font-size:22px;
+  letter-spacing:-0.02em;
+  transition:opacity .25s cubic-bezier(.22,1,.36,1);
+}
+
+.brand:hover{
+  opacity:.85;
+}
+
+.brand .mark{
+  width:38px;
+  height:38px;
+  flex-shrink:0;
+  filter:drop-shadow(0 2px 6px rgba(47,111,237,.25));
+  transition:filter .3s cubic-bezier(.22,1,.36,1), transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+.brand:hover .mark{
+  filter:drop-shadow(0 4px 10px rgba(47,111,237,.4));
+  transform:scale(1.05);
+}
+
+.brand span{
+  display:flex;
+  flex-direction:column;
+  line-height:1.15;
+}
+
+.brand span small{
+  font-family:'Inter', 'Segoe UI', sans-serif;
+  font-weight:500;
+  font-size:11.5px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#4FB6E8;
+  margin-top:2px;
+}
+
+.mark-pulse{
+  stroke:#2F6FED;
+  stroke-width:2.4;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:120;
+  stroke-dashoffset:120;
+  animation:draw 2.4s ease-in-out infinite;
+}
+
+@keyframes draw{
+  0%{stroke-dashoffset:120;}
+  45%{stroke-dashoffset:0;}
+  100%{stroke-dashoffset:-120;}
+}
+
+/* ---------- Nav links ---------- */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  list-style:none;
+}
+
+.nav-links a{
+  position:relative;
+  text-decoration:none;
+  color:#0B2E4E;
+  font-family:'Inter', 'Segoe UI', sans-serif;
+  font-weight:600;
+  font-size:15px;
+  padding:8px 4px;
+  opacity:.7;
+  transition:opacity .25s cubic-bezier(.22,1,.36,1), color .25s cubic-bezier(.22,1,.36,1), transform .25s cubic-bezier(.22,1,.36,1);
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:2px;
+  bottom:-2px;
+  width:calc(100% - 4px);
+  height:2.5px;
+  background:linear-gradient(90deg, #2F6FED, #4FB6E8);
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+.nav-links a:hover{
+  opacity:1;
+  color:#2F6FED !important;
+  transform:translateY(-1px);
+}
+
+.nav-links a:hover::after{
+  transform:scaleX(1);
+}
+
+.nav-links a.active{
+  opacity:1;
+  color:#2F6FED !important;
+  font-weight:700;
+}
+
+.nav-links a.active::after{
+  transform:scaleX(1);
+}
+
+/* ---------- Actions ---------- */
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.btn-consult{
+  text-decoration:none;
+  font-family:'Inter', 'Segoe UI', sans-serif;
+  font-weight:600;
+  font-size:14.5px;
+  color:#0B2E4E;
+  padding:10px 18px;
+  border-radius:999px;
+  border:1.5px solid #E1EBF2;
+  background:#FFFFFF;
+  transition:border-color .25s cubic-bezier(.22,1,.36,1), color .25s cubic-bezier(.22,1,.36,1), box-shadow .25s cubic-bezier(.22,1,.36,1), transform .2s cubic-bezier(.22,1,.36,1);
+}
+
+.btn-consult:hover{
+  border-color:#2F6FED;
+  color:#2F6FED;
+  box-shadow:0 2px 8px rgba(11,46,78,.06);
+  transform:translateY(-1px);
+}
+
+.btn-book{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  font-family:'Inter', 'Segoe UI', sans-serif;
+  font-weight:700;
+  font-size:14.5px;
+  color:#FFFFFF;
+  padding:11px 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg, #2F6FED, #4FB6E8);
+  box-shadow:0 8px 20px rgba(47,111,237,.28);
+  transition:transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s cubic-bezier(.22,1,.36,1), filter .25s cubic-bezier(.22,1,.36,1);
+}
+
+.btn-book svg{
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+.btn-book:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(47,111,237,.38);
+  filter:brightness(1.04);
+}
+
+.btn-book:hover svg{
+  transform:translateX(3px);
+}
+
+.btn-book:active,
+.btn-consult:active{
+  transform:translateY(0);
+}
+
+/* ---------- Burger (mobile) ---------- */
+
+.burger{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:38px;
+  height:38px;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  padding:8px;
+  border-radius:10px;
+  transition:background .25s cubic-bezier(.22,1,.36,1);
+}
+
+.burger:hover{
+  background:#F3F8FC;
+}
+
+.burger span{
+  display:block;
+  height:2.4px;
+  width:100%;
+  border-radius:2px;
+  background:#0B2E4E;
+  transition:transform .3s cubic-bezier(.22,1,.36,1), opacity .2s cubic-bezier(.22,1,.36,1);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px){
+  .navbar{
+    padding:14px 20px;
+  }
+
+  .burger{
+    display:flex;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:70px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    background:#FFFFFF;
+    border-bottom:1px solid #E1EBF2;
+    box-shadow:0 10px 30px rgba(11,46,78,.10);
+    padding:8px 0;
+    transform:translateY(-12px);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:transform .3s cubic-bezier(.22,1,.36,1), opacity .3s cubic-bezier(.22,1,.36,1), visibility .3s;
+  }
+
+  .nav-links.open{
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+
+  .nav-links li{
+    width:100%;
+  }
+
+  .nav-links a{
+    display:block;
+    width:100%;
+    padding:14px 24px;
+  }
+
+  .nav-links a::after{
+    display:none;
+  }
+
+  .nav-links a:hover{
+    transform:none;
+    background:#F3F8FC;
+  }
+
+  .nav-links a.active{
+    background:#F3F8FC;
+  }
+
+  .nav-actions{
+    display:none;
+  }
+}
+
+@media (max-width: 480px){
+  .brand{
+    font-size:19px;
+  }
+
+  .brand span small{
+    font-size:10px;
+  }
+}
