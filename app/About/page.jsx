@@ -344,7 +344,7 @@ export default function About() {
         <div className={styles.container}>
           <h2>Have a Concern You've Been Putting Off?</h2>
           <p>Talk to Dr. Sachin directly, in confidence, at a time that works for you.</p>
-          <Link href="/consultation" className={styles.btnPrimary}>
+          <Link href="/Consultation" className={styles.btnPrimary}>
             Book a Consultation
           </Link>
         </div>

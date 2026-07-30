@@ -69,11 +69,11 @@ export default function Header() {
         </li>
 
         <li>
-          <a href="/consultation">Consultation</a>
+          <a href="/Consultation">Consultation</a>
         </li>
 
         <li>
-          <a href="/cart">Consultation</a>
+          <a href="/cart">Cart</a>
         </li>
       </ul>
 
