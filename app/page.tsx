@@ -446,7 +446,7 @@ export default function Home() {
         <div className={styles.container}>
           <h2>Need Medical Assistance?</h2>
           <p>Book your appointment today and consult with our healthcare experts in complete confidence.</p>
-          <Link href="/consultation" className={styles.btnPrimary}>
+          <Link href="/Consultation" className={styles.btnPrimary}>
             Book Now
           </Link>
         </div>
